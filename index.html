@@ -17,7 +17,7 @@
 
     #botao {
       position: absolute;
-      right: 12cm; /* Distância de 15 cm da margem direita + 1 cm de distância */
+      right: 12%; /* Alterado para percentual para melhor responsividade */
       top: 50%;
       transform: translate(0, -50%);
       padding: 12px 24px; /* Tamanho do botão um pouco maior */
@@ -30,12 +30,13 @@
     }
 
     #retangulo {
-      width: 15cm;
+      width: 80%; /* Alterado para percentual para melhor responsividade */
+      max-width: 15cm; /* Largura máxima para evitar que o retângulo fique muito largo */
       height: 5cm;
       border: 2px solid red; /* Borda do retângulo de cor vermelha */
       overflow: hidden; /* Evita que as frases ultrapassem as bordas do retângulo */
       position: absolute;
-      right: 8cm; /* Distância de 8 cm da borda direita */
+      right: 10%; /* Alterado para percentual para melhor responsividade */
       top: calc(45% + 0.0cm); /* 2cm abaixo da posição atual do centro do botão */
       transform: translateY(50%); /* Posiciona metade do retângulo abaixo do centro do botão */
       transition: top 0.3s ease; /* Adicionando uma transição de posição */
@@ -51,6 +52,19 @@
       width: 100%; /* Garante que a largura da frase seja igual à largura do retângulo */
       text-align: center; /* Centraliza o texto dentro do retângulo */
       font-size: 1.5em; /* Tamanho da fonte das frases */
+    }
+
+    /* Adicionando uma consulta de mídia para estilos específicos em telas menores */
+    @media screen and (max-width: 600px) {
+      #botao {
+        right: 5%;
+      }
+
+      #retangulo {
+        width: 90%;
+        max-width: 100%;
+        right: 5%;
+      }
     }
   </style>
 </head>
