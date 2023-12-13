@@ -17,7 +17,7 @@
 
     #botao {
       position: absolute;
-      right: 15cm; /* Distância de 10 cm da margem direita */
+      right: 15cm; /* Distância de 15 cm da margem direita */
       top: 50%;
       transform: translate(0, -50%);
       padding: 10px 20px;
@@ -27,6 +27,15 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    #retangulo {
+      width: 15px;
+      height: 5px;
+      border: 1px solid black;
+      position: absolute;
+      right: 15cm;
+      top: calc(50% + 30px); /* 30px é a metade da altura do botão + 5px de espaço */
+    }
   </style>
 </head>
 <body>
@@ -34,5 +43,8 @@
 
   <!-- Botão -->
   <button id="botao">Meu Botão</button>
+
+  <!-- Retângulo -->
+  <div id="retangulo"></div>
 </body>
 </html>
