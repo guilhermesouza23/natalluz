@@ -142,6 +142,13 @@
         botao.style.visibility = "visible";
       }, 10000); // 10 segundos em milissegundos
     }
+    document.addEventListener('keydown', function(event) {
+  // Verifica se a tecla pressionada é F11
+  if (event.key === 'F11') {
+    // Evita a ação padrão de entrar em modo de tela cheia
+    event.preventDefault();
+  }
+});
   </script>
 </body>
 </html>
