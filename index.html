@@ -35,9 +35,9 @@
       border: 1px solid black;
       position: absolute;
       right: 8cm; /* Distância de 8 cm da borda direita */
-      top: calc(50% - 3cm); /* 3cm acima da posição atual do centro do botão */
+      top: calc(50% + 2cm); /* 2cm abaixo da posição atual do centro do botão */
       transform: translateY(50%); /* Posiciona metade do retângulo abaixo do centro do botão */
-      transition: visibility 0.3s ease; /* Adicionando uma transição de visibilidade */
+      transition: top 0.3s ease; /* Adicionando uma transição de posição */
     }
   </style>
 </head>
@@ -53,6 +53,7 @@
   <script>
     function ocultarBotao() {
       var botao = document.getElementById("botao");
+      var retangulo = document.getElementById("retangulo");
 
       botao.style.visibility = "hidden"; // Oculta o botão
 
