@@ -26,6 +26,71 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: visibility 0.3s ease; /* Adicionando uma transição de visibilidade */
+    }
+
+    #retangulo {
+      width: 15cm;
+      height: 5cm;
+      border: 1px solid black;
+      position: absolute;
+      right: 8cm; /* Distância de 8 cm da borda direita */
+      top: calc(50% + 27px); /* 27px é a metade da altura do botão + 3px de distância */
+      transform: translateY(50%); /* Posiciona metade do retângulo abaixo do centro do botão */
+    }
+  </style>
+</head>
+<body>
+  <!-- Conteúdo da sua página vai aqui -->
+
+  <!-- Botão -->
+  <button id="botao" onclick="ocultarBotao()">Meu Botão</button>
+
+  <!-- Retângulo -->
+  <div id="retangulo"></div>
+
+  <script>
+    function ocultarBotao() {
+      var botao = document.getElementById("botao");
+      var retangulo = document.getElementById("retangulo");
+
+      botao.style.visibility = "hidden"; // Oculta o botão
+
+      setTimeout(function() {
+        botao.style.visibility = "visible"; // Torna o botão visível novamente
+      }, 10000); // 10 segundos em milissegundos
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sua Página</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: url('https://drive.google.com/uc?export=view&id=1WgfMSKgdDken6ifhJDKSTcKn40Q710oQ') center/cover no-repeat;
+      background-size: 100% 100%;
+    }
+
+    #botao {
+      position: absolute;
+      right: 16cm; /* Distância de 15 cm da margem direita + 1 cm de distância */
+      top: 50%;
+      transform: translate(0, -50%);
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
       transition: background-color 0.3s ease; /* Transição de cor durante 0.3 segundos */
     }
 
