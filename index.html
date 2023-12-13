@@ -26,6 +26,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s ease; /* Transição de cor durante 0.3 segundos */
     }
 
     #retangulo {
@@ -37,15 +38,34 @@
       top: calc(50% + 30px); /* 30px é a metade da altura do botão + 5px de espaço */
       transform: translateY(50%); /* Posiciona metade do retângulo abaixo do centro do botão */
     }
+
+    #botao:hover {
+      background-color: #45a049; /* Cor diferente quando o mouse está sobre o botão */
+    }
   </style>
 </head>
 <body>
   <!-- Conteúdo da sua página vai aqui -->
 
   <!-- Botão -->
-  <button id="botao">Meu Botão</button>
+  <button id="botao" onclick="ocultarDivs()">Meu Botão</button>
 
   <!-- Retângulo -->
   <div id="retangulo"></div>
+
+  <script>
+    function ocultarDivs() {
+      var botao = document.getElementById("botao");
+      var retangulo = document.getElementById("retangulo");
+
+      botao.style.display = "none";
+      retangulo.style.display = "none";
+
+      setTimeout(function() {
+        botao.style.display = "block";
+        retangulo.style.display = "block";
+      }, 10000); // 10 segundos em milissegundos
+    }
+  </script>
 </body>
 </html>
