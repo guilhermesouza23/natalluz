@@ -15,20 +15,21 @@
       background: url('https://drive.google.com/uc?export=view&id=1WgfMSKgdDken6ifhJDKSTcKn40Q710oQ') center/cover no-repeat;
       background-size: 100% 100%;
     }
-  #botao {
- width: 13cm;
-      height: 5cm;
-      overflow: hidden; /* Evita que as frases ultrapassem as bordas do retângulo */
-      position: absolute;
-      right: 4.1cm; /* Distância de 8 cm da borda direita */
-      top: calc(33% + 0.0cm); /* 2cm abaixo da posição atual do centro do botão */
-      transform: translateY(50%)
+#botao {
+  position: absolute;
+  right: 6.3cm;
+  top: 43%;
+  transform: translate(0, -50%);
+  width: 13cm; /* Largura desejada */
+  height: 7cm; /* Altura desejada */
   background-color: #FF0000;
-  color: #fff; /* Cor do texto branco */
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: visibility 0.3s ease; /* Adicionando uma transição de visibilidade */
+  transition: visibility 0.3s ease;
+  box-sizing: border-box;
+  padding: 0; /* Remova o padding para definir o tamanho diretamente com width e height */
 }
  
 
