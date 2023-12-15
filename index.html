@@ -6,7 +6,7 @@
   <title>natalluz</title>
   <style>
     body {
-       oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;"
+      oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;"
       display: flex;
       align-items: center;
       justify-content: center;
@@ -16,46 +16,46 @@
       background-size: 100% 100%;
     }
 
-   #botao {
-  position: absolute;
-  right: 8.3cm; /* 6.3cm + 2cm para a direita */
-  top: calc(43% + 4cm); /* 43% + 4cm para baixo */
-  transform: translate(0, -50%);
-  width: 13cm;
-  height: 7cm;
-  background-color: #FF0000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: visibility 0.3s ease;
-  box-sizing: border-box;
-  padding: 0;
-} 
-
+    #botao {
+      position: absolute;
+      right: 8.3cm;
+      top: calc(43% + 4cm);
+      transform: translate(0, -50%);
+      width: 13cm;
+      height: 7cm;
+      background-color: #FF0000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: visibility 0.3s ease;
+      box-sizing: border-box;
+      padding: 0;
+    } 
 
     #retangulo {
+      display: none; /* Inicialmente oculto */
       width: 13cm;
       height: 5cm;
-      border: 2px solid red; /* Borda do retângulo de cor vermelha */
-      overflow: hidden; /* Evita que as frases ultrapassem as bordas do retângulo */
+      border: 2px solid red;
+      overflow: hidden;
       position: absolute;
-      right: 4.1cm; /* Distância de 8 cm da borda direita */
-      top: calc(33% + 0.0cm); /* 2cm abaixo da posição atual do centro do botão */
-      transform: translateY(50%); /* Posiciona metade do retângulo abaixo do centro do botão */
-      transition: top 0.3s ease; /* Adicionando uma transição de posição */
-      padding: 10px; /* Adicionando padding para melhorar a aparência */
+      right: 4.1cm;
+      top: calc(33% + 0.0cm);
+      transform: translateY(50%);
+      transition: top 0.3s ease;
+      padding: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white; /* Cor das frases */
-      font-size: 1.2em; /* Tamanho da fonte das frases */
+      color: white;
+      font-size: 1.2em;
     }
 
     #fraseAleatoria {
-      width: 100%; /* Garante que a largura da frase seja igual à largura do retângulo */
-      text-align: center; /* Centraliza o texto dentro do retângulo */
-      font-size: 1.5em; /* Tamanho da fonte das frases */
+      width: 100%;
+      text-align: center;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -67,7 +67,7 @@
 
   <!-- Retângulo -->
   <div id="retangulo">
-     <h2 id="fraseAleatoria"></h2>
+    <h2 id="fraseAleatoria"></h2>
   </div>
 
   <script>
@@ -121,7 +121,7 @@
   "Ouça, respeite e aceite as suas emoções. Todas têm o seu valor."
     ];
 
-    function exibirFraseAleatoria() {
+     function exibirFraseAleatoria() {
       var botao = document.getElementById("botao");
       var retangulo = document.getElementById("retangulo");
       var fraseAleatoria = document.getElementById("fraseAleatoria");
@@ -150,3 +150,5 @@
   </script>
 </body>
 </html>
+
+   
