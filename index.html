@@ -12,7 +12,7 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background: url('https://drive.google.com/uc?export=view&id=1WgfMSKgdDken6ifhJDKSTcKn40Q710oQ') center/cover no-repeat;
+      background: url('https://drive.google.com/uc?export=view&id=1WgfMSl3Dken6ifhJDKSTcKn40Q710oQ') center/cover no-repeat;
       background-size: 100% 100%;
     }
 
@@ -120,11 +120,13 @@
   "Não rotule nem conclua tudo de imediato. Assim você vai limitar as suas ações. Deixe fluir...",
   "Ouça, respeite e aceite as suas emoções. Todas têm o seu valor."
     ];
-
-     function exibirFraseAleatoria() {
+function exibirFraseAleatoria() {
       var botao = document.getElementById("botao");
       var retangulo = document.getElementById("retangulo");
       var fraseAleatoria = document.getElementById("fraseAleatoria");
+
+      // Esconder o botão
+      botao.style.display = "none";
 
       // Escolhe uma frase aleatória
       var frase = frasesNatal[Math.floor(Math.random() * frasesNatal.length)];
@@ -132,23 +134,18 @@
       // Exibe a frase dentro do retângulo
       fraseAleatoria.innerHTML = frase;
 
-      // Oculta o botão
-      botao.style.visibility = "hidden";
-
-      // Exibe o retângulo e a frase
+      // Exibir o retângulo
       retangulo.style.display = "block";
-      fraseAleatoria.style.display = "block";
 
       // Oculta o retângulo e a frase após 8 segundos
       setTimeout(function() {
         retangulo.style.display = "none";
-        fraseAleatoria.style.display = "none";
-        // Torna o botão visível novamente
-        botao.style.visibility = "visible";
+        // Exibir o botão novamente
+        botao.style.display = "block";
       }, 8000); // 8 segundos em milissegundos
     }
   </script>
 </body>
 </html>
 
-   
+     
