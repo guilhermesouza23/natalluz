@@ -15,13 +15,14 @@
       background: url('https://drive.google.com/uc?export=view&id=1WgfMSKgdDken6ifhJDKSTcKn40Q710oQ') center/cover no-repeat;
       background-size: 100% 100%;
     }
-#botao {
+
+   #botao {
   position: absolute;
-  right: 6.3cm;
-  top: 43%;
+  right: 8.3cm; /* 6.3cm + 2cm para a direita */
+  top: calc(43% + 4cm); /* 43% + 4cm para baixo */
   transform: translate(0, -50%);
-  width: 13cm; /* Largura desejada */
-  height: 7cm; /* Altura desejada */
+  width: 13cm;
+  height: 7cm;
   background-color: #FF0000;
   color: #fff;
   border: none;
@@ -29,9 +30,9 @@
   cursor: pointer;
   transition: visibility 0.3s ease;
   box-sizing: border-box;
-  padding: 0; /* Remova o padding para definir o tamanho diretamente com width e height */
-}
- 
+  padding: 0;
+} 
+
 
     #retangulo {
       width: 13cm;
