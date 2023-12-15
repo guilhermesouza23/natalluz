@@ -6,7 +6,7 @@
   <title>natalluz</title>
   <style>
     body {
-       oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;"
+      oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;"
       display: flex;
       align-items: center;
       justify-content: center;
@@ -15,46 +15,41 @@
       background: url('https://drive.google.com/uc?export=view&id=1WgfMSKgdDken6ifhJDKSTcKn40Q710oQ') center/cover no-repeat;
       background-size: 100% 100%;
     }
+    
     #botao {
-  position: absolute;
-  right: 6cm;
-  top: calc(43% + 2.5cm); /* 43% + 2cm para baixo */
-  transform: translate(0, -50%);
-  width: 5cm; /* Largura desejada */
-  height: 5cm; /* Altura desejada */
-  background-color: #FF0000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: visibility 0.3s ease;
-  box-sizing: border-box;
-  padding: 12px 24px;
-}
+      position: absolute;
+      right: 6cm;
+      top: calc(43% + 2.5cm);
+      transform: translate(0, -50%);
+      width: 5cm;
+      height: 5cm;
+      background-color: #FF0000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: visibility 0.3s ease;
+      box-sizing: border-box;
+      padding: 12px 24px;
+    }
 
-
-    #retangulo {
+    #conteudo {
+      display: none; /* Inicialmente oculto */
       width: 13cm;
       height: 5cm;
-      border: 2px solid red; /* Borda do retângulo de cor vermelha */
-      overflow: hidden; /* Evita que as frases ultrapassem as bordas do retângulo */
+      border: 2px solid red;
+      overflow: hidden;
       position: absolute;
-      right: 4.1cm; /* Distância de 8 cm da borda direita */
-      top: calc(33% + 0.0cm); /* 2cm abaixo da posição atual do centro do botão */
-      transform: translateY(50%); /* Posiciona metade do retângulo abaixo do centro do botão */
-      transition: top 0.3s ease; /* Adicionando uma transição de posição */
-      padding: 10px; /* Adicionando padding para melhorar a aparência */
+      right: 4.1cm;
+      top: calc(33% + 0.0cm);
+      transform: translateY(50%);
+      transition: top 0.3s ease;
+      padding: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white; /* Cor das frases */
-      font-size: 1.2em; /* Tamanho da fonte das frases */
-    }
-
-    #fraseAleatoria {
-      width: 100%; /* Garante que a largura da frase seja igual à largura do retângulo */
-      text-align: center; /* Centraliza o texto dentro do retângulo */
-      font-size: 1.5em; /* Tamanho da fonte das frases */
+      color: white;
+      font-size: 1.2em;
     }
   </style>
 </head>
@@ -64,9 +59,9 @@
   <!-- Botão -->
   <button id="botao" onclick="exibirFraseAleatoria()">CLIQUE AQUI PARA GERAR SUA FRASE</button>
 
-  <!-- Retângulo -->
-  <div id="retangulo">
-     <h2 id="fraseAleatoria"></h2>
+  <!-- Retângulo e Frase -->
+  <div id="conteudo">
+    <h2 id="fraseAleatoria"></h2>
   </div>
 
   <script>
@@ -119,10 +114,9 @@
   "Não rotule nem conclua tudo de imediato. Assim você vai limitar as suas ações. Deixe fluir...",
   "Ouça, respeite e aceite as suas emoções. Todas têm o seu valor."
     ];
-
-    function exibirFraseAleatoria() {
+       function exibirFraseAleatoria() {
       var botao = document.getElementById("botao");
-      var retangulo = document.getElementById("retangulo");
+      var conteudo = document.getElementById("conteudo");
       var fraseAleatoria = document.getElementById("fraseAleatoria");
 
       // Escolhe uma frase aleatória
@@ -135,19 +129,18 @@
       botao.style.visibility = "hidden";
 
       // Exibe o retângulo e a frase
-      retangulo.style.display = "block";
-      fraseAleatoria.style.display = "block";
+      conteudo.style.display = "block";
 
       // Oculta o retângulo e a frase após 10 segundos
       setTimeout(function() {
-        retangulo.style.display = "none";
-        fraseAleatoria.style.display = "none";
+        conteudo.style.display = "none";
         // Torna o botão visível novamente
         botao.style.visibility = "visible";
       }, 10000); // 10 segundos em milissegundos
     }
-              
- 
   </script>
 </body>
 </html>
+   
+
+  
